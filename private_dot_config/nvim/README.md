@@ -1,4 +1,4 @@
-# Neovim Configuration Audit
+# Neovim Configuration 
 
 This Neovim configuration is a compact LazyVim-based setup located at:
 
