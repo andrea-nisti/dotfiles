@@ -1,9 +1,16 @@
 {{- $name := promptStringOnce . "name" "Full name" -}}
 {{- $email := promptStringOnce . "email" "Email address" -}}
 {{- $work := promptBoolOnce . "workMachine" "Is this a work machine?" -}}
+{{- $editor := promptStringOnce . "editor" "Preferred editor" -}}
 
 data:
   name: {{ $name | quote }}
   email: {{ $email | quote }}
   workMachine: {{ $work }}
-  editor: "nvim"
+  editor: {{ $editor | quote }}
+
+edit: 
+  command: {{ $editor | quote }}
+
+merge:
+  command: {{ $editor | quote }}

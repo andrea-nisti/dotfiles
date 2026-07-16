@@ -51,7 +51,7 @@ These plugins are directly defined by this config.
 | Plugin | File | Purpose |
 |---|---|---|
 | `LazyVim/LazyVim` | `lua/config/lazy.lua` | Imports LazyVim's default plugin set. |
-| `ellisonleao/gruvbox.nvim` | `lua/config/lazy.lua` | Provides the configured Gruvbox colorscheme. |
+| `sainnhe/gruvbox-material` | `lua/config/lazy.lua` | Provides the configured Gruvbox Material colorscheme. |
 | `neovim/nvim-lspconfig` | `lua/plugins/lsp.lua` | Configures language servers. |
 | `nvim-treesitter/nvim-treesitter` | `lua/plugins/lsp.lua` | Treesitter syntax parsing and highlighting. |
 | `mason-org/mason.nvim` | `lua/plugins/lsp.lua` | Installs external developer tools. |
@@ -71,7 +71,7 @@ The current `lazy-lock.json` includes these plugins:
 | `friendly-snippets` | `main` | &#124; | `nvim-treesitter-textobjects` | `main` |
 | `gitsigns.nvim` | `main` | &#124; | `nvim-ts-autotag` | `main` |
 | `grug-far.nvim` | `main` | &#124; | `persistence.nvim` | `main` |
-| `gruvbox.nvim` | `main` | &#124; | `plenary.nvim` | `master` |
+| `gruvbox-material` | `master` | &#124; | `plenary.nvim` | `master` |
 | `lazy.nvim` | `main` | &#124; | `snacks.nvim` | `main` |
 | `lazydev.nvim` | `main` | &#124; | `todo-comments.nvim` | `main` |
 | `lualine.nvim` | `master` | &#124; | `tokyonight.nvim` | `main` |
@@ -86,12 +86,12 @@ Defined in `lua/config/lazy.lua`:
 
 | Setting | Value |
 |---|---|
-| Colorscheme | `gruvbox` |
+| Colorscheme | `gruvbox-material` |
 | LazyVim import | `lazyvim.plugins` |
 | User plugin import | `plugins` |
 | `defaults.lazy` | `false` |
 | `defaults.version` | `false` |
-| Install colorschemes | `tokyonight`, `habamax`, `gruvbox` |
+| Install colorschemes | `gruvbox-material`, `tokyonight`, `habamax` |
 | Plugin update checker | Enabled |
 | Update notifications | Disabled |
 | Disabled runtime plugins | `gzip`, `tarPlugin`, `tohtml`, `zipPlugin` |
