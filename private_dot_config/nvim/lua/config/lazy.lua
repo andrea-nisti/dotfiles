@@ -21,16 +21,8 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
       opts = {
-        colorscheme = "gruvbox-material",
+        colorscheme = "everforest",
       },
-    },
-    {
-      "sainnhe/gruvbox-material",
-      init = function()
-        vim.g.gruvbox_material_background = "medium"
-        vim.g.gruvbox_material_foreground = "material"
-        vim.g.gruvbox_material_better_performance = 1
-      end,
     },
     -- import/override with your plugins
     { import = "plugins" },
@@ -44,7 +36,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "gruvbox-material", "tokyonight", "habamax" } },
+  install = { colorscheme = { "everforest", "tokyonight", "habamax" } },
   checker = {
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update

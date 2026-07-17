@@ -25,13 +25,6 @@ return {
             return opts
         end,
     },
-
-    -- Treesitter
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-    },
-
     -- Mason ensure_installed for these LSP servers
     {
         "mason-org/mason.nvim",
