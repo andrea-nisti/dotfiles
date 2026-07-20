@@ -1,1 +1,3 @@
 /.vim/undo
+/.config/nvim/lazyvim.json
+/.config/nvim/lazy-lock.json
