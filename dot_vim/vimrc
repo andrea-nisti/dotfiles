@@ -1,0 +1,88 @@
+" -------------------------------------------------------------------
+" Core behavior
+" -------------------------------------------------------------------
+
+if has('termguicolors')
+  set termguicolors
+endif
+
+set encoding=utf-8
+set hidden
+set backspace=indent,eol,start
+
+" -------------------------------------------------------------------
+" UI
+" -------------------------------------------------------------------
+
+set number
+set relativenumber
+set showmatch
+set laststatus=2
+set scrolloff=3
+set signcolumn=yes
+set splitright
+set splitbelow
+
+" -------------------------------------------------------------------
+" Search and completion
+" -------------------------------------------------------------------
+
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set wildmenu
+set wildmode=longest:full,full
+
+" -------------------------------------------------------------------
+" Indentation
+" -------------------------------------------------------------------
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
+
+" -------------------------------------------------------------------
+" Backups and undo
+" -------------------------------------------------------------------
+
+set nobackup
+set undofile
+set undodir=~/.vim/undo//
+silent! call mkdir(expand(&undodir), 'p')
+
+" -------------------------------------------------------------------
+" Syntax and filetypes
+" -------------------------------------------------------------------
+
+syntax on
+filetype plugin indent on
+
+" -------------------------------------------------------------------
+" Colorscheme
+" -------------------------------------------------------------------
+
+packadd! gruvbox-material
+set background=dark
+let g:gruvbox_material_background = 'medium'
+let g:gruvbox_material_better_performance = 1
+colorscheme gruvbox-material
+
+" -------------------------------------------------------------------
+" Mappings
+" -------------------------------------------------------------------
+
+let mapleader = ' '
+
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>Q :qa!<CR>
+nnoremap <Leader>r :set relativenumber!<CR>
+
+" -------------------------------------------------------------------
+" Statusline
+" -------------------------------------------------------------------
+
+set statusline=%f%m%r%=%-14.(%l,%c%V%)%=%P
