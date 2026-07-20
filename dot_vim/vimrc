@@ -2,87 +2,129 @@
 " Core behavior
 " -------------------------------------------------------------------
 
+" Check whether this Vim build supports true-color terminal output.
 if has('termguicolors')
+  " Enable 24-bit RGB colors in compatible terminals.
   set termguicolors
+" End the true-color capability check.
 endif
 
+" Use UTF-8 as the internal character encoding.
 set encoding=utf-8
+" Allow switching away from buffers with unsaved changes.
 set hidden
+" Let Backspace delete indentation, line breaks, and inserted text.
 set backspace=indent,eol,start
 
 " -------------------------------------------------------------------
 " UI
 " -------------------------------------------------------------------
 
+" Show absolute line numbers.
 set number
+" Show line numbers relative to the cursor position.
 set relativenumber
+" Briefly jump to a matching bracket when typing one.
 set showmatch
+" Always show the statusline.
 set laststatus=2
+" Keep at least three screen lines visible above and below the cursor.
 set scrolloff=3
+" Always show the sign column to avoid text shifting.
 set signcolumn=yes
+" Open vertical splits to the right of the current window.
 set splitright
+" Open horizontal splits below the current window.
 set splitbelow
 
 " -------------------------------------------------------------------
 " Search and completion
 " -------------------------------------------------------------------
 
+" Make searches case-insensitive by default.
 set ignorecase
+" Use case-sensitive search when the query contains uppercase letters.
 set smartcase
+" Show search matches while typing the search pattern.
 set incsearch
+" Highlight all matches for the current search pattern.
 set hlsearch
+" Show an enhanced command-line completion menu.
 set wildmenu
+" Complete command-line matches to the longest common text, then cycle.
 set wildmode=longest:full,full
 
 " -------------------------------------------------------------------
 " Indentation
 " -------------------------------------------------------------------
 
+" Display tab characters as two spaces wide.
 set tabstop=2
+" Use two spaces for each indentation step.
 set shiftwidth=2
+" Treat two spaces as a tab while editing.
 set softtabstop=2
+" Insert spaces instead of tab characters.
 set expandtab
+" Copy indentation from the previous line when starting a new one.
 set autoindent
 
 " -------------------------------------------------------------------
 " Backups and undo
 " -------------------------------------------------------------------
 
+" Do not keep backup files after writing.
 set nobackup
+" Persist undo history across Vim sessions.
 set undofile
+" Store persistent undo files under ~/.vim/undo, with safe path encoding.
 set undodir=~/.vim/undo//
+" Create the undo directory if it does not already exist.
 silent! call mkdir(expand(&undodir), 'p')
 
 " -------------------------------------------------------------------
 " Syntax and filetypes
 " -------------------------------------------------------------------
 
+" Enable syntax highlighting.
 syntax on
+" Enable filetype detection, filetype plugins, and filetype indentation.
 filetype plugin indent on
 
 " -------------------------------------------------------------------
 " Colorscheme
 " -------------------------------------------------------------------
 
+" Load the optional gruvbox-material package if available.
 packadd! gruvbox-material
+" Tell Vim the colorscheme should use a dark background.
 set background=dark
+" Select the medium contrast variant of gruvbox-material.
 let g:gruvbox_material_background = 'medium'
+" Enable gruvbox-material performance optimizations.
 let g:gruvbox_material_better_performance = 1
+" Apply the gruvbox-material colorscheme.
 colorscheme gruvbox-material
 
 " -------------------------------------------------------------------
 " Mappings
 " -------------------------------------------------------------------
 
+" Use Space as the leader key for custom mappings.
 let mapleader = ' '
 
+" Save the current file with Space+w in normal mode.
 nnoremap <Leader>w :w<CR>
+" Quit the current window with Space+q in normal mode.
 nnoremap <Leader>q :q<CR>
+" Force quit all windows without saving using Space+Q in normal mode.
 nnoremap <Leader>Q :qa!<CR>
+" Toggle relative line numbers with Space+r in normal mode.
 nnoremap <Leader>r :set relativenumber!<CR>
 
 " -------------------------------------------------------------------
 " Statusline
 " -------------------------------------------------------------------
 
+" Show file name, modified/read-only flags, cursor position, and file percentage.
 set statusline=%f%m%r%=%-14.(%l,%c%V%)%=%P
