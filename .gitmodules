@@ -1,6 +1,0 @@
-[submodule "dot_vim/pack/colors/opt/gruvbox-material"]
-	path = dot_vim/pack/colors/opt/gruvbox-material
-	url = https://github.com/sainnhe/gruvbox-material.git
-[submodule "dot_vim/pack/dist/start/vim-airline"]
-	path = dot_vim/pack/dist/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline
