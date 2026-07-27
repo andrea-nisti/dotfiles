@@ -77,8 +77,7 @@ The current `lazy-lock.json` includes these plugins:
 | `lualine.nvim` | `master` | &#124; | `tokyonight.nvim` | `main` |
 | `mason-lspconfig.nvim` | `main` | &#124; | `trouble.nvim` | `main` |
 | `mason.nvim` | `main` | &#124; | `ts-comments.nvim` | `main` |
-| `mini.ai` | `main` | &#124; | `which-key.nvim` | `main` |
-| `mini.icons` | `main` | &#124; |  |  |
+| `mini.ai` | `main` | &#124; | `mini.icons` | `main` |
 
 ## Main Settings
 
