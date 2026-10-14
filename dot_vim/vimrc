@@ -80,3 +80,10 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :qa!<CR>
 nnoremap <Leader>r :set relativenumber!<CR>
+
+nnoremap d "dd           "send latest delete to d register
+nnoremap D "dD           "send latest delete to d register 
+nnoremap dd "ddd         "send latest delete to d register
+nnoremap x "_x           "send char deletes to black hole, not worth saving
+nnoremap <leader>p "dp   "paste what was deleted
+nnoremap <leader>P "dP   "paste what was deleted
