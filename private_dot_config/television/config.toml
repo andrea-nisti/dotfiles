@@ -188,7 +188,7 @@ ctrl-e = "go_to_input_end"
 
 [shell_integration]
 # This specifies the default fallback channel if no other channel is matched.
-fallback_channel = "bash-history"
+# fallback_channel = "bash-history"
 
 [shell_integration.channel_triggers]
 # Add your channel triggers here. Each key is a channel that will be triggered
