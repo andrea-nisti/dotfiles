@@ -1,4 +1,5 @@
 ~/.config/nvim/lazyvim.json
 ~/.config/nvim/lazy-lock.json
 ~/.vim/undo
-~/.vim/pack/colors/opt/**/after
+.vim/pack/colors/opt/gruvbox-material/after
+.vim/pack/colors/opt/gruvbox-material/after/**
