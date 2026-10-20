@@ -1,0 +1,42 @@
+[metadata]
+name = "bazel-targets"
+description = "Browse Bazel rules, inspect dependencies, build, test, and run"
+requirements = ["bazel", "bash"]
+
+[source]
+shell = "bash"
+command = [
+  "bazel query 'kind(rule, //...)' --output=label --noshow_progress --color=no",
+  "bazel query 'tests(//...)' --output=label --noshow_progress --color=no",
+]
+
+[preview]
+shell = "bash"
+command = [
+  "bazel query '{}' --output=build --noshow_progress --color=no 2>&1",
+  "bazel query 'deps({}, 1)' --output=label_kind --noshow_progress --color=no 2>&1",
+]
+
+[keybindings]
+enter = "confirm_selection"
+f5 = "actions:build"
+f6 = "actions:test"
+f7 = "actions:run"
+
+[actions.build]
+description = "Build the selected target"
+command = "bazel build '{}'"
+shell = "bash"
+mode = "execute"
+
+[actions.test]
+description = "Test the selected target"
+command = "bazel test '{}' --test_output=errors"
+shell = "bash"
+mode = "fork"
+
+[actions.run]
+description = "Run the selected runnable target"
+command = "bazel run '{}'"
+shell = "bash"
+mode = "fork"
